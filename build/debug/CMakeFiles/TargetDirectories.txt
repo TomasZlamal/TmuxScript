@@ -1,0 +1,3 @@
+/home/s/code/projects/tmuxscript/build/debug/CMakeFiles/tmuxscript.dir
+/home/s/code/projects/tmuxscript/build/debug/CMakeFiles/edit_cache.dir
+/home/s/code/projects/tmuxscript/build/debug/CMakeFiles/rebuild_cache.dir

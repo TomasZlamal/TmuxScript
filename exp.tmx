@@ -1,7 +1,7 @@
-s"cppray"#
-  w"nvim"
+"cppray"
+  "nvim"#
     !{cd ~/code/projects/cppraytracer/}
     !{nvim .}
 
-  w"cmake"#
+  "cmake"
     !{cd ~/code/projects/cppraytracer/build/debug/}

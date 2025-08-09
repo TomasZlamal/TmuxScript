@@ -1,0 +1,11 @@
+#!/bin/bash
+tmux has-session -t cppray
+if [ $? != 0 ]; then
+	tmux new-session -d -s cppray -n nvim
+	tmux send-keys -t cppray:nvim 'cd ~/code/projects/cppraytracer/' C-m
+	tmux send-keys -t cppray:nvim 'nvim .' C-m
+	tmux new-window -t cppray -n cmake
+	tmux send-keys -t cppray:cmake 'cd ~/code/projects/cppraytracer/build/debug/' C-m
+	tmux select-window -t cppray:nvim
+fi
+tmux attach-session -t cppray

@@ -179,31 +179,30 @@ public:
       f_processWord(word);
     }
   }
-  void debugPrintCommands() {
-    std::cout << "#!/bin/bash\n";
+  void printCommands(std::ostream &out) {
+    out << "#!/bin/bash\n";
     for (auto &command : out_commands) {
       switch (command.type) {
       case CommandType::CreateSessionIfNotExists: {
-        std::cout << "tmux has-session -t " << command.value
-                  << "\nif [ $? != 0 ]; then\n\ttmux new-session -d -s "
-                  << command.value << " -n terminal\n";
+        out << "tmux has-session -t " << command.value
+            << "\nif [ $? != 0 ]; then\n\ttmux new-session -d -s "
+            << command.value << " -n terminal\n";
       } break;
       case CommandType::AttachSession: {
-        std::cout << "tmux attach-session -t " << command.value << "\n";
+        out << "tmux attach-session -t " << command.value << "\n";
       } break;
       case CommandType::CreateWindow: {
-        std::cout << "\ttmux new-window -t " << command.for_session.value()
-                  << " -n " << command.value << "\n";
+        out << "\ttmux new-window -t " << command.for_session.value() << " -n "
+            << command.value << "\n";
       } break;
       case CommandType::SendKeys: {
         // std::cout << "|" << command.for_window.value() << "|";
-        std::cout << "\ttmux send-keys -t " << command.for_session.value()
-                  << ":" << command.for_window.value() << " '" << command.value
-                  << "' C-m\n";
+        out << "\ttmux send-keys -t " << command.for_session.value() << ":"
+            << command.for_window.value() << " '" << command.value << "' C-m\n";
       } break;
       case CommandType::SelectWindow: {
-        std::cout << "\ttmux select-window -t " << command.for_session.value()
-                  << ":" << command.value << "\nfi\n";
+        out << "\ttmux select-window -t " << command.for_session.value() << ":"
+            << command.value << "\nfi\n";
       } break;
       }
     }
@@ -213,6 +212,6 @@ int main(int argc, char **argv) {
   TmuxScriptInterpreter tsi;
   const char *infile = argv[1];
   tsi.interpretFile(infile);
-  tsi.debugPrintCommands();
+  tsi.printCommands(std::cout);
   return 0;
 }

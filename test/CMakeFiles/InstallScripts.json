@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/s/code/projects/tmuxscript/test/cmake_install.cmake",
-		"/home/s/code/projects/tmuxscript/test/src/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

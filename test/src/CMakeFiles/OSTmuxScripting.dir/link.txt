@@ -1,0 +1,2 @@
+/usr/bin/ar qc libOSTmuxScripting.a CMakeFiles/OSTmuxScripting.dir/script_interpreter.cc.o CMakeFiles/OSTmuxScripting.dir/util.cc.o
+/usr/bin/ranlib libOSTmuxScripting.a

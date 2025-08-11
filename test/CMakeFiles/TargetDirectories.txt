@@ -1,0 +1,9 @@
+/home/s/code/projects/tmuxscript/test/CMakeFiles/tmuxscript.dir
+/home/s/code/projects/tmuxscript/test/CMakeFiles/testexec.dir
+/home/s/code/projects/tmuxscript/test/CMakeFiles/test.dir
+/home/s/code/projects/tmuxscript/test/CMakeFiles/edit_cache.dir
+/home/s/code/projects/tmuxscript/test/CMakeFiles/rebuild_cache.dir
+/home/s/code/projects/tmuxscript/test/src/CMakeFiles/OSTmuxScripting.dir
+/home/s/code/projects/tmuxscript/test/src/CMakeFiles/test.dir
+/home/s/code/projects/tmuxscript/test/src/CMakeFiles/edit_cache.dir
+/home/s/code/projects/tmuxscript/test/src/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,25 @@
+Start testing: Aug 11 13:32 CEST
+----------------------------------------------------------
+1/1 Testing: BasicFuncTest
+1/1 Test: BasicFuncTest
+Command: "/home/s/code/projects/tmuxscript/test/testexec"
+Directory: /home/s/code/projects/tmuxscript/test
+"BasicFuncTest" start time: Aug 11 13:32 CEST
+Output:
+----------------------------------------------------------
+STRING: #!/bin/bash
+tmux has-session -t session
+if [ $? != 0 ]; then
+	tmux new-session -d -s session -n window
+	tmux send-keys -t session:window 'nvim .' C-m
+fi
+tmux attach-session -t session
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"BasicFuncTest" end time: Aug 11 13:32 CEST
+"BasicFuncTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 11 13:32 CEST

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/tmuxscript.dir/main.cpp.o -o tmuxscript  src/libOSTmuxScripting.a

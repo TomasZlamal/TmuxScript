@@ -34,8 +34,8 @@ The "#" means "select this window". It's optional.
 The first string is always interpreted as the session name. All other strings are individual windows.
 
 This example opens a session called "cppray", with three windows.
-`!{}` executes some command inside of some window
-## Building
+`!{}` executes some command inside of some window. The Interpreter assumes you want to attach to the session, so it auto-attached to the session.
+## Building and running it
 Create a build directory and build it:
 ```bash
 mkdir build
@@ -43,7 +43,8 @@ cd build
 cmake ..
 cmake --build .
 ```
-You should get a `tmuxscript` executable in the build directory.
+You should get a `tmuxscript` executable in the build directory. You can optionally rename this to `tmx`.
+Put the executable in your system PATH. Now you can use it using `tmx script.tmx`.
 ## Testing
 Testing is set up with CMake, so it works similiarly to building.
 ```bash

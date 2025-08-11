@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 project(tmuxscript VERSION 0.1)
-add_executable(tmuxscript main.cpp)
+add_executable(tmuxscript main.cc)
 
 add_subdirectory(src)
 
